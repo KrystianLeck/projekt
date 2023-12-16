@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>METODY DOŚWIADCZALNE W WYTRZYMAŁOŚCI MATERIAŁÓW </h1>
+	<div id="top-menu">
+        <a href="proba_rozciagania.html">Statyczna próba rozciągania</a>
+        <a href="proba_sciskania.html">Próba ściskania</a>
+        <a href="proba_skrecania.html">Próba skręcania</a>
+    </div>
+	<h3>Próba skręcania</h3>
+    <div id="input-form">
+	<h2>Wybierz rodzaj stali:</h2>
+        <select id="material">
+            <option value="St0s">Stal St0s</option>
+            <option value="St3s">Stal St3s</option>
+			<option value="St4s">Stal St4s</option>
+            <option value="St5">Stal St5s</option>
+			<option value="St6">Stal St6s</option>
+            <option value="St7">Stal St7s</option>
+			<option value="10">Stal 10</option>
+			
+        </select>
+		
+
+        <div id="test-data">
+		
+            <label for="obciazenie">Obciążenie (N):</label>
+            <input type="number" id="obciazenie" placeholder="np. 1000"><br>
+			
+			<label for="dlugosc">Długość próbki (m):</label>
+            <input type="number" id="dlugosc" placeholder="np. 2"><br>
+						
+			<label for="kat">Średnica próbki (mm)</label>
+            <input type="number" id="srednica" placeholder="np. 1"><br>
+			
+			<label for="kat">Kąt skrętu (stopnie) </label>
+            <input type="number" id="kat" placeholder="np. 45"><br>
+
+			
+        </div>
+
+        <!-- Dodatkowe pola będą dynamicznie generowane na podstawie wyboru rodzaju badania -->
+        <div id="dodatkowe-pola"></div>
+
+        <button onclick="generujRaport()">Generuj raport</button>
+    </div>
+
+    <div id="raport">
+        <h2>Wyniki Analizy:</h2>
+        <p id="wynik"></p>
+    </div>
+
+    <script src="script_skrecanie.js"></script>
+</body>
+</html>

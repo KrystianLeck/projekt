@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Wyrównuje wszystko do środka */
+
+}
+#top-menu {
+    display: flex;
+ justify-content: space-around;
+}
+#top-menu a {
+    flex: 1; /* Każdy link zajmie równą przestrzeń */
+    text-align: center; /* Wyrównuje tekst do środka w każdym linku */
+    color: white;
+    padding: 8px 10px;
+}
+ #top-menu a:hover {
+	 color: #778899;
+ }
+#top-menu, #input-form, #raport, #naglowek {
+    width: 80%; /* Ustawia szerokość wszystkich głównych elementów */
+    max-width: 1000px; /* Opcjonalnie, można ustawić maksymalną szerokość */
+    margin-bottom: 20px; /* Daje odstęp pomiędzy elementami */
+}
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+#input-form, #raport {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+select, input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#top-menu {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+#top-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+#top-menu a:hover {
+    border-bottom: 2px solid #fff;
+}
+/* Dodatkowe style dla wyników analizy */
+#wynik {
+    font-size: 1.2em;
+}
+#raport h1 {
+    color: #003366;
+    font-size: 1.5em;
+}
+
+#raport p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333333;
+}
+

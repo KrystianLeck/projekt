@@ -1,0 +1,101 @@
+/* Resetowanie domyślnych styli */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Podstawowy styl dla całej strony */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Nagłówki */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0077b6;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Formularz wyboru rodzaju badania */
+#input-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Przycisk generowania raportu */
+button {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Pole wynikowe raportu */
+#raport {
+    margin-top: 20px;
+}
+
+/* Dodatkowe style dla wybranych elementów */
+#test-type {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#test-data label, #test-data input {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Dostosuj wygląd pól do wprowadzania danych */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Dodatkowe style dla wyników analizy */
+#wynik {
+    font-size: 1.2em;
+}
+#raport h1 {
+    color: #003366;
+    font-size: 1.5em;
+}
+
+#raport p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333333;
+}
+
+#top-menu {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    width: 100%; /* Szerokość div na całą dostępną przestrzeń */
+    display: flex; /* Użycie Flexbox do lepszego zarządzania elementami */
+    justify-content: center; /* Wyśrodkowanie elementów flex w poziomie */
+    align-items: center; /* Wyśrodkowanie elementów flex w pionie */
+}
+
+#top-menu a {
+    margin: 0 10px; /* Dodanie marginesów między linkami */
+}
