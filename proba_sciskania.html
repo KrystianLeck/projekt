@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Próba ściskania </title>
+<meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>METODY DOŚWIADCZALNE W WYTRZYMAŁOŚCI MATERIAŁÓW </h1>
+   <div id="naglowek">  <h1>METODY DOŚWIADCZALNE W WYTRZYMAŁOŚCI MATERIAŁÓW </h1></div>
 	<div id="top-menu">
         <a href="proba_rozciagania.html">Statyczna próba rozciągania</a>
         <a href="proba_sciskania.html">Próba ściskania</a>
@@ -21,40 +23,24 @@
 			<option value="St6">Stal St6s</option>
             <option value="St7">Stal St7s</option>
 			<option value="10">Stal 10</option>
-			
-        </select>
-		
-
+		</select>
         <div id="test-data">
-		
-            <label for="obciazenie">Obciążenie (N):</label>
+		    <label for="obciazenie">Obciążenie (N):</label>
             <input type="number" id="obciazenie" placeholder="np. 1000"><br>
-			
 			<label for="dlugosc">Długość próbki (m):</label>
             <input type="number" id="dlugosc" placeholder="np. 2"><br>
-			
 			<label for="dlugosc">Długość końcowa próbki (m):</label>
             <input type="number" id="dlugosck" placeholder="np. 2"><br>
-			
 			<label for="przekroj">Pole przekroju (mm^2):</label>
             <input type="number" id="przekroj" placeholder="np. 50"><br>
 			
-		
-
-			
         </div>
-
-        <!-- Dodatkowe pola będą dynamicznie generowane na podstawie wyboru rodzaju badania -->
-        <div id="dodatkowe-pola"></div>
-
-        <button onclick="generujRaport()">Generuj raport</button>
+              <button onclick="generujRaport()">Generuj raport</button>
     </div>
-
     <div id="raport">
         <h2>Wyniki Analizy:</h2>
         <p id="wynik"></p>
     </div>
-
     <script src="script_sciskanie.js"></script>
 </body>
 </html>
