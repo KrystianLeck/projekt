@@ -2,12 +2,17 @@ function generujRaport() {
     const material = document.getElementById("material").value;
     const obciazenie = parseFloat(document.getElementById("obciazenie").value);
     const przekroj = parseFloat(document.getElementById("przekroj").value);
-
     const dlugosc = parseFloat(document.getElementById("dlugosc").value);
     const dlugosck = parseFloat(document.getElementById("dlugosck").value);
-   
+     if (!material || isNaN(obciazenie) || isNaN(dlugosc) || isNaN(dlugosck) || isNaN(przekroj)) {
+    alert("Proszę wypełnić wszystkie pola formularza.");
+    return;
+}
+if (obciazenie <= 0 || dlugosc <= 0 || dlugosck <= 0 || przekroj <= 0) {
+    alert("Proszę wypełnić wszystkie pola formularza poprawnymi danymi. Wartości nie mogą być mniejsze niż 0.");
+    return;
+}
     let wynik = '';
-
     switch (material) {
         case "St0s":
             wynik = obliczSt0s(obciazenie, dlugosck, dlugosc, przekroj);
@@ -38,7 +43,6 @@ function generujRaport() {
 	const raportSection = document.getElementById("raport");
     raportSection.scrollIntoView({ behavior: "smooth" });
 }
-
 function obliczSt0s(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
@@ -59,10 +63,8 @@ function obliczSt0s(obciazenie, dlugosck, dlugosc, przekroj) {
 	} else {
         wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
-
 function obliczSt3s(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
@@ -83,12 +85,8 @@ function obliczSt3s(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
          wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
-
-   
-
 function obliczSt4s(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
@@ -109,11 +107,9 @@ function obliczSt4s(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
          wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
-  
-function obliczSt5(obciazenie, dlugosck, dlugosc, przekroj) {
+  function obliczSt5(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
     const przekroj1 = przekroj / 1000000;
@@ -133,11 +129,9 @@ function obliczSt5(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
          wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
- 
-function obliczSt6(obciazenie, dlugosck, dlugosc, przekroj) {
+ function obliczSt6(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
     const przekroj1 = przekroj / 1000000;
@@ -157,11 +151,9 @@ function obliczSt6(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
         wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
-     
- function obliczSt7(obciazenie, dlugosck, dlugosc, przekroj) {
+      function obliczSt7(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
    const przekroj1 = przekroj / 1000000;
@@ -181,11 +173,9 @@ function obliczSt6(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
         wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 }
- 
-function oblicz10(obciazenie, dlugosck, dlugosc, przekroj) {
+ function oblicz10(obciazenie, dlugosck, dlugosc, przekroj) {
     // Obliczenie naprężenia (MPa)
     let wynik = '';
     const przekroj1 = przekroj / 1000000;
@@ -205,6 +195,6 @@ function oblicz10(obciazenie, dlugosck, dlugosc, przekroj) {
     } else {
          wynik += `<h1>Próba ściskania</h1><b>Naprężenie rozciągające</b> wynosi: ${naprezenie_pr.toFixed(2)} MPa więc przekroczyło granicę wytrzymałości na ściskanie, materiał ulegnie zerwaniu. W przypadku próby ściskania, materiał może pęknąć lub ulec innym formom katastrofalnego uszkodzenia.`;
     }
-
     return wynik;
 } 
+ 
